@@ -2,15 +2,14 @@ const { defineConfig } = require('cypress');
 const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib');
 
 module.exports = defineConfig({
-    projectId: "mhuqqg",
-
-  reporter: 'cypress-mochawesome-reporter',
+  projectId: "mhuqqg",
+  reporter: "mochawesome",
   reporterOptions: {
-    charts: true,
-    reportPageTitle: 'regression-suite',
-    embeddedScreenshots: true,
-    inlineAssets: true,
-    saveAllAttempts: false,
+    reportDir: "cypress/reports/mochawesome-report",
+    overwrite: false,
+    html: false,
+    json: true,
+    timestamp: "mmddyyyy_HHMMss"
     
   },
   e2e: {
