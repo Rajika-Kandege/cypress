@@ -3,7 +3,7 @@ const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/li
 
 module.exports = defineConfig({
   projectId: "mhuqqg",
-  "reporter": "mochawesome",
+  reporter: "mochawesome",
   reporterOptions: {
     reportDir: "cypress/reports/",
     overwrite: true,
