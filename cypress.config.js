@@ -4,25 +4,25 @@ const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/li
 module.exports = defineConfig({
   projectId: "mhuqqg",
   "reporter": "mochawesome",
-  "reporterOptions": {
-    "reportDir": "cypress/reports/",
-    "overwrite": false,
-    "html": false,
-    "json": true,
-    "timestamp": "mmddyyyy_HHMMss"
+  reporterOptions: {
+    reportDir: "cypress/reports/",
+    overwrite: true,
+    html: true,
+    json: true,
+    timestamp: "mmddyyyy_HHMMss"
     
   },
   e2e: {
     setupNodeEvents(on, config) {
-      on('before:run', async (details) => {
-        console.log('override before:run');
-        await beforeRunHook(details);
-      });
+      // on('before:run', async (details) => {
+      //   console.log('override before:run');
+      //   await beforeRunHook(details);
+      // });
 
-      on('after:run', async () => {
-        console.log('override after:run');
-        await afterRunHook();
-      });
+      // on('after:run', async () => {
+      //   console.log('override after:run');
+      //   await afterRunHook();
+      // });
     },
   },
 });
