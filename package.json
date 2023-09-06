@@ -7,7 +7,7 @@
     "cleanup": "rm -fr cypress/reports",
     "merge_reports": "mochawesome-merge cypress/reports/*.json > output.json",
     "mochawesome_report": "marge --reportDir cypress/reports/mochawesome-html-report -t Cypress_Test_Report -p Cypress_HMTL_Report -f Cypress_HMTL_Report --charts true output.json",
-    "cy_dashboard": "cypress run --record --key 29205ddf-4657-4fe6-8454-332d116299bb",
+    "cy_dashboard": "cypress run --record --key 413b4bed-9ea9-4943-96c8-6a5e80cced2d",
     "cy:report": "npm run cleanup && npm run cy_dashboard && npm run merge_reports && npm run mochawesome_report"
   },
   "author": "",
